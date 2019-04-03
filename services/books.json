@@ -1,0 +1,40 @@
+{
+    "books": [
+      {
+        "bookId": "9781593275846",
+        "title": "Eloquent JavaScript, Second Edition",
+        "author": "Marijn Haverbeke",
+        "image_path" : "cover-1234.png"
+          },
+      {
+        "bookId": "9781449331818",
+        "title": "Learning JavaScript Design Patterns",
+        "author": "Addy Osmani",
+        "image_path" : "inde456.jpg"
+      },
+      {
+        "bookId": "9781449365035",
+        "title": "Speaking JavaScript",
+        "author": "Axel Rauschmayer",
+        "image_path" : "index-953.jpg"
+      },
+      {
+        "bookId": "9781491950296",
+        "title": "Harry Poter and Cursed Child",
+        "author": "J.K Rowlling",
+        "image_path" : "309571.jpg"
+      },
+      {
+        "bookId": "9781593277574",
+        "title": "Harry Poter and the Chamber of Secrets",
+        "author": "J.K Rowlling",
+        "image_path" : "309575.jpeg"
+      },
+      {
+        "isbn": "9781491904244",
+        "title": "Harry Poter and the Goblet of Fire",
+        "author": "J.K Rowlling",
+        "image_path" : "3097569.jpg"
+      }
+    ]
+  }
