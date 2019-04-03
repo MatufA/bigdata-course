@@ -1,0 +1,27 @@
+{
+  "name": "ex01",
+  "version": "1.0.0",
+  "description": "a first exercise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatufA/bigdata-course.git"
+  },
+  "keywords": [
+    "javascript",
+    "Nodejs",
+    "Express"
+  ],
+  "author": "Yuda and Adiel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatufA/bigdata-course/issues"
+  },
+  "homepage": "https://github.com/MatufA/bigdata-course#readme",
+  "dependencies": {
+    "npm": "^6.9.0"
+  }
+}
