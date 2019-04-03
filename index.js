@@ -1,15 +1,22 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const bodyParser = require('body-parser');
+
+const app = express()
+const port = 3000
 
 var myLogger = function (req, res, next) {
-  console.log('LOGGED')
+  console.log(Date.now() + " : request - " + req.body)
   next()
 }
 
-app.use(myLogger)
+app.all(myLogger)
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-app.listen(3000)
+app.post('/GetBook', (req, res) => res.send('Harry Potter'))
+app.post('/GetAuthor', (req, res) => res.send('Harry Potter'))
+app.post('/GetCover', (req, res) => res.sendFile('/source/bigdata-course/public/image/' + req.body.bookId))
+
+app.use(express.static('public'))
+app.listen(port, () => console.log(`app listening on port ${port}!`))

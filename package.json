@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/MatufA/bigdata-course#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "npm": "^6.9.0"
   }
 }
