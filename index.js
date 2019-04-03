@@ -1,18 +1,18 @@
 const express = require('express')
 const bodyParser = require('body-parser');
+var dateFormat = require('dateformat');
 
 const app = express()
 const port = 3000
 
-var myLogger = function (req, res, next) {
-  console.log(Date.now() + " : request - " + req.body)
+const myLogger = function (req, res, next) {
+  console.log(dateFormat(Date.now(), "dd/mm/yyyy HH:MM:ss") + " : request - %j", req.body)
   next()
 }
 
-app.all(myLogger)
-
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+app.use(myLogger)
 
 app.post('/GetBook', (req, res) => res.send('Harry Potter'))
 app.post('/GetAuthor', (req, res) => res.send('Harry Potter'))
