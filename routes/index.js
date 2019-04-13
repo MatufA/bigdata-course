@@ -3,6 +3,9 @@ const router = express.Router()
 const bodyParser = require('body-parser');
 const logger = require('../public/javascripts/middleware')
 const booksInfo = require('../public/javascripts/bookInfo')
+const rootProject = require('app-root-path')
+
+const image_folder = rootProject.path + '/public/image/'
 
 router.use(bodyParser.json()); // support json encoded bodies
 router.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
@@ -70,14 +73,14 @@ router.post('/GetCover', (req, res) => {
   if(req.body.bookId){
     bookData = booksInfo(req.body.bookId, 'bookId')
     if (bookData) {
-      res.sendFile('/source/bigdata-course/public/image/' + bookData.image_path)
+      res.sendFile(image_folder + bookData.image_path)
     } else {
       res.sendStatus(404)
     }
   }else if (req.body.bookName) {
     bookData = booksInfo(req.body.bookName, 'title')
     if (bookData) {
-      res.sendFile('/source/bigdata-course/public/image/' + bookData.image_path)
+      res.sendFile(image_folder + bookData.image_path)
     } else {
       res.sendStatus(404)
     }
@@ -90,14 +93,14 @@ router.get('/GetCover', (req, res) => {
   if(req.query.bookId){
     bookData = booksInfo(req.query.bookId, 'bookId')
     if (bookData) {
-      res.sendFile('/source/bigdata-course/public/image/' + bookData.image_path)
+      res.sendFile(image_folder + bookData.image_path)
     } else {
       res.sendStatus(404)
     }
   }else if (req.query.bookName) {
     bookData = booksInfo(req.query.bookName, 'title')
     if (bookData) {
-      res.sendFile('/source/bigdata-course/public/image/' + bookData.image_path)
+      res.sendFile(image_folder + bookData.image_path)
     } else {
       res.sendStatus(404)
     }
