@@ -9,16 +9,13 @@ a Big Data course, Ariel university.
 
 Supporting get requests.
 ## Examples:
-localhost:3000\GetBook?bookId=9781449365035
-
+localhost:3000\GetBook?bookId=9781449365035 <br />
 will return book's author and name: Axel Rauschmayer, Speaking JavaScript.
 
-localhost:3000\GetAuthor?bookName=Learning%20JavaScript%20Design%20Patterns
-
+localhost:3000\GetAuthor?bookName=Learning%20JavaScript%20Design%20Patterns<br />
 will return book's author and serial number: Addy Osmani, 9781449331818.
 
-localhost:3000\GetCover?bookId=9781491950296
-localhost:3000\GetCover?bookName=Harry%20Poter%20and%20Cursed%20Child
-
+localhost:3000\GetCover?bookId=9781491950296<br />
+localhost:3000\GetCover?bookName=Harry%20Poter%20and%20Cursed%20Child<br />
 will return Harry Poter and Cursed Child cover as Image.
 
